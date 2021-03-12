@@ -1,8 +1,8 @@
 pipeline{
         agent any
         environment {
-                //DB_PASSWORD = credentials("DB_PASSWORD")
-                DB_PASSWORD = "secret"
+                DB_PASSWORD = credentials("DB_PASSWORD")
+                
         }
         stages{
                 stage('Clone Chaperootodo'){
