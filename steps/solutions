@@ -1,6 +1,13 @@
 ##jenkins-pipelines-exercise
 
-1. set db password which could be anything.
-2. command to remove existing directory
-3. clone the link
-4.
+* set db password which could be anything.
+* command to remove existing directory
+* clone the link
+* Add jenkins user
+ sudo useradd -m -s /bin/bash jenkins
+ sudo visudo
+ jenkins     ALL=(ALL:ALL) NOPASSWD:ALL
+* port 80 problem: 
+  Open an SSH terminal on your Jenkins machine
+	Enter sudo systemctl status nginx
+	If NGINX is running, enter sudo systemctl stop nginx && sudo systemctl disable nginx
